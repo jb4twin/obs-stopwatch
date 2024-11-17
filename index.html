@@ -17,7 +17,9 @@
     <body>
         <div class="stopwatch" />
         <script>
-            const start = Date.now();
+            const urlParams = new URLSearchParams(window.location.search);
+            const subtract = urlParams.has('subtract') ? parseInt(urlParams.get('subtract')) : 0;
+			const start = Date.now() - subtract;
 
             setInterval(() => {
                 const timeInMiliseconds = (Date.now() - start);
@@ -44,3 +46,8 @@
         </script>
     </body>
 </html>
+
+
+
+
+
