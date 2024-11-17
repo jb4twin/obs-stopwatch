@@ -19,7 +19,7 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const offset = urlParams.has('subtract') ? parseInt(urlParams.get('offset')) : 0;
-			const start = Date.now() - offset;
+	    const start = Date.now() - offset;
 
             setInterval(() => {
                 const timeInMiliseconds = (Date.now() - start);
