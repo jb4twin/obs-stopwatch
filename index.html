@@ -21,7 +21,7 @@
 	    const hours = urlParams.has('h') ? parseInt(urlParams.get('h')) * 60 * 60 * 1000 : 0;
 	    const minutes = urlParams.has('m') ? parseInt(urlParams.get('m')) * 60 * 1000 : 0;
 	    const seconds = urlParams.has('s') ? parseInt(urlParams.get('s')) * 1000 : 0;
-            const offset = hours + minutes + seconds : 0;
+            const offset = hours + minutes + seconds;
 	    const start = Date.now() - offset;
 
             setInterval(() => {
